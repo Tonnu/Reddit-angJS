@@ -1,6 +1,19 @@
 <div>
     <a href="{{ post.link }}">{{ post.title }}</a>
 </div>
-
+<br/>
+<form ng-submit="submitComment()">
+    <input ng-model="comment.user"/><br/>
+    <textarea ng-model="comment.comment"/><br/>
+    <input type="submit" value="Add comment"/>
+</form><br/>
+<div ng-repeat="comment in comments">
+    <br/>
+    0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0<br/>
+    {{ comment.user }} posted: <br/>
+    {{ comment.comment }}<br/>
+    0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0<br/>
+</div>
+<br/>
 <a href="#/posts">Back to Posts</a>
 
